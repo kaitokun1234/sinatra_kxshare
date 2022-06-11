@@ -1,0 +1,18 @@
+<center>
+<div id="post mx-5 p-3">
+	<select class="browser-default subject form-control">
+		<option value="" disabled selected>Choose your option</option>
+		<option value="1">Option 1</option>
+		<option value="2">Option 2</option>
+		<option value="3">Option 3</option>
+	</select><br>
+  <input type="text" placeholder="予測" class="predict form-control value"><br>
+	<input type="text" placeholder="価格" class="predict amount form-control mb-1"><br>
+	<button class="btn btn-warning predict make">予測作成</button>
+</div>
+
+<div id="mypredictions" class="mt-5">
+	<h5>My Predictions</h5>
+  <%= erb :'tmp/predict' %>
+</div>
+</center>

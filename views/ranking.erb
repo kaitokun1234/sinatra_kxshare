@@ -1,0 +1,21 @@
+<center>
+			<div class="ranking" id="rank">
+				<table class="striped">
+          <thead>
+            <tr>
+              <th>rank</th>
+              <th>accuracy</th>
+              <th>address</th>
+            </tr>
+          </thead>
+
+          <tbody class="rank core" v-for="card in cards">
+            <tr>
+              <td>{{ card.rank }}</td>
+              <td>{{ card.accuracy }}%</td>
+              <td>{{ card.predictor }}</td>
+            </tr>
+          </tbody>
+        </table>
+			</div>
+</center>

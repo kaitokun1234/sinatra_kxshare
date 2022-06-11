@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>Welotte</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="blockchain, web3.0">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		<link rel="stylesheet" href="/style.css" />
+	</head>
+	
+	<body class="bg-dark text-white">
+		<div class="shadow">
+			<center>
+				<h1 class="text-warning"><a href="/" class="link-warning text-decoration-none">Wellote</a></h1>
+				<a href="/prediction" class="btn link-light">POST</a>
+				<a href="/buy" class="btn link-light">BUY</a>
+				<a href="/suggest" class="btn link-light">SUGGEST</a>
+				<a href="/ranking" class="btn link-light">RANKING</a>
+			</center>
+			<hr color="ffff">
+		</div>
+    <div class="mt-4 container">
+		<div class="row">
+			<h3 class="text-center mb-4"><%= @title %></h3></div>
+			<div class="row">
+      <%= yield %>
+			</div>
+    </div>
+
+		<script src="./assets/abi.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+		<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+		<script src="assets/style.css"></script>
+
+	</body>
+</html>
