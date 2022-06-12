@@ -1,0 +1,5 @@
+<ul>
+    <% @sbjs.each do |sbj| %>
+        <li><strong><%= sbj.content %></strong>: <span class="small"><%= sbj.created_at %></span></li>
+    <% end %>
+</ul>

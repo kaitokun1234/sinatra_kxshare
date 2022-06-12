@@ -20,6 +20,11 @@
 			</center>
 			<hr color="ffff">
 		</div>
+
+		<% flash.each do |message_type, message| %>
+			<div class="<%="alert alert-#{message_type}"%> bg-primary text-white"><%= message %></div>
+		<% end %>
+
     <div class="mt-4 container">
 		<div class="row">
 			<h3 class="text-center mb-4"><%= @title %></h3></div>

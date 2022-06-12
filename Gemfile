@@ -11,3 +11,9 @@ gem 'webrick'
 gem "haml"
 gem "sass"
 gem "coffee-script"
+gem 'activerecord'
+gem 'sinatra-activerecord'
+gem 'sqlite3'
+gem 'rake'
+
+gem 'sinatra-flash'

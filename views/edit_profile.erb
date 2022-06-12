@@ -1,0 +1,12 @@
+<center>
+	<p>this information is display on the your profile</p>
+  <form method="patch" action="/edit_profile/<%= @addr %>">
+  
+  <label>name</label><br>
+		<input type="text" name="name" placeholder="name" class="mb-3" /><br>
+
+    <label>comment</label>
+		<textarea type="text" name="comment" rows="4" class="w-100" placeholder="I'm a google insider"></textarea><br>
+		<input type="submit" value="send" class="btn btn-warning">
+	</form>
+</center>
