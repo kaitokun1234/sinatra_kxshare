@@ -120,7 +120,6 @@ DEPENDENCIES
   haml
   http
   puma
-  rake
   reel
   sass
   sinatra

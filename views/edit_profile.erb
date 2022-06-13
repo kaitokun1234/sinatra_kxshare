@@ -1,8 +1,9 @@
 <center>
 	<p>this information is display on the your profile</p>
-  <form method="patch" action="/edit_profile/<%= @addr %>">
+  <form method="post" action="/editprofile/<%=@addr%>">
   
   <label>name</label><br>
+		<input type="hidden" name="_method" value="PATCH">
 		<input type="text" name="name" placeholder="name" class="mb-3" /><br>
 
     <label>comment</label>

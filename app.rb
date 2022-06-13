@@ -51,16 +51,11 @@ get '/product/:id' do
   erb :product
 end
 
-get '/profile/:address' do
-  @addr = params[:address]
-  @prof = Profile.find_by(addr: @addr)
-  erb :profile
-end
 
 post '/create_subject' do
- Subject.create(
-  content: params[:content]
- )
+ sbj = Subject.new
+ sbj.content = params[:content]
+ sbj.save!
  flash[:success] = "Successfully sended! thank you for suggestion!!"
  redirect '/'
 end
@@ -70,12 +65,20 @@ get '/edit_profile/:address' do
   erb :edit_profile
 end
 
-patch '/edit_profile/:address' do
-  #@prof = Profile.find_or_create_by(addr: params[:address])
+get '/profile/:address' do
+  @addr = params[:address]
+  @prof = Profile.find_by(addr: @addr)
+  if @prof == nil
+    Profile.create!(addr: params[:address])
+    redirect "/profile/#{params[:address]}"
+  end
+  erb :profile
+end
+
+patch '/editprofile/:address' do
   @prof = Profile.find_by(addr: params[:address])
-  @prof.name = params[:name],
+  @prof.name = params[:name]
   @prof.comment = params[:comment]
-  @prof.save
-  flash[:success] = "Successfully edited your profile!"
-  redirect '/profile/#{@addr}'
+  @prof.save!
+  redirect "/profile/#{params[:address]}"
 end

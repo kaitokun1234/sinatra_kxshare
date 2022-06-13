@@ -8,8 +8,8 @@ create table subjects(
 
 create table profiles(
     addr text NOT NULL,
-    'name' text NOT NULL DEFAULT ("名無し"),
-    comment text DEFAULT ("no comment"),
+    name text DEFAULT ('nanashi'),
+    comment text DEFAULT ('no comment'),
     created_at text NOT NULL DEFAULT (DATETIME('now', 'localtime')),
     updated_at text NOT NULL DEFAULT (DATETIME('now', 'localtime'))
 );
