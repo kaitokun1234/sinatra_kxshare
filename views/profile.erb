@@ -1,6 +1,12 @@
+<div class="bg-dark border rounded p-3 mb-3 shadow">
+  <div class="float-end text-end"><a class="btn btn-primary text-end">claim</a></div>
+  Your Unclaimed: <span class="text-warning fs-3">00.00kx</span>
+</div>
+
 <center>
 <h1><%= @prof.name %></h1>
 <p class="small"><%= @addr %></p>
+
 
 <div style="width:200px">
   <canvas id="mychart"></canvas>
@@ -17,6 +23,7 @@
 </center>
 
 <div class="predicts">
+<h5>predicts</h5>
 <%= erb :'tmp/predict' %>
 </div>
 
@@ -31,10 +38,11 @@ var myChart = new Chart(ctx, {
   data: {
     labels: ["accuracy"],
     datasets: [{
-      data: [70, 30],
-      backgroundColor: ['blue', 'gray'],
+      data: [73, 27],
+      backgroundColor: ['yellow', 'gray'],
       weight: 100,
     }],
   },
 });
 </script>
+</center>
